@@ -1,0 +1,17 @@
+para seguir os estudo de validação do formulario 
+no terminal do vs code com o comando npm i formik , instalamos a biblioteca formik.
+
+
+
+1- é necesario que o formulario estaja aninhado dentro da tag Fomik
+
+exe: 	<Formik>
+	   <form>
+
+	   </form>	
+	</Formik>
+
+
+2- Formik aceita varios parametros 
+
+exe:initialValues={{ nome: "", email: "", data: "" }}

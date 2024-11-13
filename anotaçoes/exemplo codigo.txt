@@ -8,7 +8,7 @@ const AddCliente = () => {
       <Formik
         initialValues={{ nome: "", email: "", data: "" }}
         onSubmit={(galinhaPintadinha) => {
-          console.log(galinhaPintadinha);
+          alert(JSON.stringify(galinhaPintadinha));
         }}
       >
         {(props) => (

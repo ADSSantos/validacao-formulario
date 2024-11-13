@@ -1,6 +1,6 @@
 /*import logo from './logo.svg';*/
 import './App.css';
-import AddCliente from './componentes/form';
+import AddCliente from './componentes/AddCliente';
 
 function App() {
   return (
