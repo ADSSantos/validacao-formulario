@@ -5,9 +5,9 @@ import AddCliente from './componentes/form';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
         <AddCliente/>
-      </header>
+     
     </div>
   );
 }
