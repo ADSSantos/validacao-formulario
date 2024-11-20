@@ -38,8 +38,8 @@ const AddCliente = () => {
                 type="text"
                 id="nome"
                 name="nome"
-                onChange={propsFormik.handleChange}
-                onBlur={propsFormik.handleBlur}
+                //onChange={propsFormik.handleChange}
+                //onBlur={propsFormik.handleBlur}
               ></Field>
               {propsFormik.errors.nome && propsFormik.touched.nome ? (
                 <div className="error">{propsFormik.errors.nome}</div>
@@ -47,26 +47,26 @@ const AddCliente = () => {
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input className="inputs"
+              <Field className="inputs"
                 type="text"
                 id="email"
                 name="email"
-                onChange={propsFormik.handleChange}
-                onBlur={propsFormik.handleBlur}
-              ></input>
+                //onChange={propsFormik.handleChange}
+                //onBlur={propsFormik.handleBlur}
+              ></Field>
               {propsFormik.errors.email && propsFormik.touched.email ? (
                 <div className="error">{propsFormik.errors.email}</div>
               ) : null}
             </div>
             <div className="form-group">
               <label>Data Nascimento</label>
-              <input className="inputs"
+              <Field className="inputs"
                 type="date"
                 id="data"
                 name="data"
-                onChange={propsFormik.handleChange}
-                onBlur={propsFormik.handleBlur}
-              ></input>
+                //onChange={propsFormik.handleChange}
+                //onBlur={propsFormik.handleBlur}
+              ></Field>
               {propsFormik.errors.data && propsFormik.touched.data ? (
                 <div className="error">{propsFormik.errors.data}</div>
               ) : null}
