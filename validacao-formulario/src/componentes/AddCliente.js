@@ -1,28 +1,28 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Field } from "formik";
 import "./AddCliente.css"
 
 
 const AddCliente = () => {
   return (
     <>
-     <h1>Clientes</h1>
+     <h1 className="h1">Clientes</h1>
       <Formik
         initialValues={{ nome: "", email: "", data: "" }}
         validate={(values2) => {
           const errors = {};
           if (!values2.nome) {
-            errors.nome = "Preencha o campo nome !";
+            errors.nome = "Preencha o campo Nome";
           }
           if (!values2.email) {
-            errors.email = "email não pode ficar vazio!";
+            errors.email = "Preencha o campo Email";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-09.=]+\.[A-Z]{2,}$/i.test(values2.email)
           ) {
             errors.email = "Email invalido!";
           }
           if (!values2.data) {
-            errors.data = "Data precisas ser preechido!";
+            errors.data = "Preencha o campo Data";
           }
           return errors;
         }}
@@ -31,23 +31,23 @@ const AddCliente = () => {
         }}
       >
         {(propsFormik) => (
-          <form onSubmit={propsFormik.handleSubmit} noValidate>
+          <form className="formulario" onSubmit={propsFormik.handleSubmit} noValidate>
             <div className="form-group">
-              <label htmlFor="nome">Nome:</label>
-              <input
+              <label htmlFor="nome">Nome</label>
+              <Field className="inputs"
                 type="text"
                 id="nome"
                 name="nome"
                 onChange={propsFormik.handleChange}
                 onBlur={propsFormik.handleBlur}
-              ></input>
+              ></Field>
               {propsFormik.errors.nome && propsFormik.touched.nome ? (
-                <div>{propsFormik.errors.nome}</div>
+                <div className="error">{propsFormik.errors.nome}</div>
               ) : null}
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
+              <label htmlFor="email">Email</label>
+              <input className="inputs"
                 type="text"
                 id="email"
                 name="email"
@@ -55,12 +55,12 @@ const AddCliente = () => {
                 onBlur={propsFormik.handleBlur}
               ></input>
               {propsFormik.errors.email && propsFormik.touched.email ? (
-                <div>{propsFormik.errors.email}</div>
+                <div className="error">{propsFormik.errors.email}</div>
               ) : null}
             </div>
             <div className="form-group">
-              <label>Data Nascimento:</label>
-              <input
+              <label>Data Nascimento</label>
+              <input className="inputs"
                 type="date"
                 id="data"
                 name="data"
@@ -68,7 +68,7 @@ const AddCliente = () => {
                 onBlur={propsFormik.handleBlur}
               ></input>
               {propsFormik.errors.data && propsFormik.touched.data ? (
-                <div>{propsFormik.errors.data}</div>
+                <div className="error">{propsFormik.errors.data}</div>
               ) : null}
             </div>
             <button type="submit">Adicionar</button>
