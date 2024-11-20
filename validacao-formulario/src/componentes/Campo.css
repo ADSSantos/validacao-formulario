@@ -1,0 +1,25 @@
+.error {
+    color: red;
+    border-color: #ff8cc8;
+    padding: 10px;
+  }
+  label{
+    padding: 5px;
+  }
+  
+  .error {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+
+  @keyframes myAnim {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }

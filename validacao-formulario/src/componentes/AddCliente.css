@@ -9,7 +9,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
 }
 
-.inputs {
+input {
   display: block;
   width: 100%;
   padding: 0.375rem;
@@ -46,7 +46,7 @@ button {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.inputs:focus,
+inputs:focus,
 button:focus {
   outline: 0;
   border-color: #ff8cc8;
@@ -57,35 +57,13 @@ button:hover {
   background-color: #da3c78;
 }
 
-.error {
-  color: red;
-  border-color: #ff8cc8;
-  padding: 10px;
-}
-label{
-  padding: 5px;
-}
 
-.error {
-  animation: myAnim 2s ease 0s 1 normal forwards;
-}
 
 button {
   margin-top: 1rem;
 }
 
-@keyframes myAnim {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
 
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
 
 @media (min-width: 300px) {
   .formulario {
